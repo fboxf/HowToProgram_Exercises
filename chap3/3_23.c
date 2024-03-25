@@ -7,18 +7,22 @@ int main (void){
 	int number;
 	int largest = 0;
 
+	printf("Please enter 10 non-negative numbers: ");
+	scanf("%d",&number);
+	if (number > largest){
+		largest = number;
+	}
+	count++;
+
 	while (count < 10 ){
-		printf("Please enter a non-negative number: ");
-		scanf("%d", &number);
+		scanf("%d",&number);
 		if (number > largest){
 			largest = number;
 		}
-		if (number > 0){
-			count++;
-		}
+		count++;
 	}
 
-	printf("%d",largest);
+	printf("The largest number is %d\n",largest);
 
 	return 0;
 }
